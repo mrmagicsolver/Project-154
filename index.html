@@ -16,12 +16,15 @@
         <a-asset-item src="./assets/fish/scene.gltf" id="fish"></a-asset-item>
         <a-asset-item src="./assets/island/scene.gltf" id="island"></a-asset-item>
         <a-asset-item src="./assets/scuba_driver/scene.gltf" id="scuba_diver"></a-asset-item>
+        <a-asset-item src="./assets/treasure_chest/scene.gltf" id="treasure_chest"></a-asset-item>
       </a-assets>
       <a-camera wasd-controls-enabled="false" position="0 10 25"></a-camera>
       <a-entity position="0 -15 -40" gltf-model="#island"></a-entity>
       <a-entity scuba-diver-rotation-reader position="5 0 15" scale="0.1 0.1 0.1" gltf-model="#scuba_diver" rotation="0 90 -20"></a-entity>
       <a-entity position="0 0 0" id="some1" obstacle></a-entity>
       <a-entity position="0 0 0" id="some2" coin></a-entity>
+      <a-entity position="0 -2 -50" gltf-model="#treasure_chest" scale="0.9 0.9 0.9"></a-entity>
+      <a-entity position="-18 -2 -50" gltf-model="#treasure_chest" scale="0.9 0.9 0.9"></a-entity>
     </a-scene>
   </body>
 </html>
