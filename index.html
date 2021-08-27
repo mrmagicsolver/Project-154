@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"
+      target="_blank"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+    <script src="./rotation.js"></script>
+    <script src="./fish.js"></script>
+    <script src="./coin.js"></script>
+  </head>
+  <body>
+    <a-scene background="color:dodgerblue">
+      <a-assets>
+        <a-asset-item src="./assets/fish/scene.gltf" id="fish"></a-asset-item>
+        <a-asset-item src="./assets/island/scene.gltf" id="island"></a-asset-item>
+        <a-asset-item src="./assets/scuba_driver/scene.gltf" id="scuba_diver"></a-asset-item>
+      </a-assets>
+      <a-camera wasd-controls-enabled="false" position="0 10 25"></a-camera>
+      <a-entity position="0 -15 -40" gltf-model="#island"></a-entity>
+      <a-entity scuba-diver-rotation-reader position="5 0 15" scale="0.1 0.1 0.1" gltf-model="#scuba_diver" rotation="0 90 -20"></a-entity>
+      <a-entity position="0 0 0" id="some1" obstacle></a-entity>
+      <a-entity position="0 0 0" id="some2" coin></a-entity>
+    </a-scene>
+  </body>
+</html>
